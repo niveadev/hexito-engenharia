@@ -5,6 +5,10 @@
   font-family:Arial, Helvetica, sans-serif;
 }
 
+html{
+  scroll-behavior:smooth;
+}
+
 body{
   background:#f5f5f5;
   color:#222;
@@ -244,48 +248,132 @@ nav ul li a:hover{
     font-size:16px;
   }
 }
-/* RODAPÉ */
+
+/* =========================
+   RODAPÉ
+========================= */
+
 footer{
-    width:100%;
-    min-height:60px;
-    background:#464646;
+  width:100%;
+  background:#2e2e2e;
 
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
+  padding:30px 40px;
 
-    padding:10px 20px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:30px;
+  flex-wrap:wrap;
 
-    color:#ffffff;
-    font-size:14px;
+  color:#fff;
 
-    font-family: Arial, Helvetica, sans-serif;
+  font-family:Arial, Helvetica, sans-serif;
 }
 
-footer, 
-footer p,
-footer ul,
-footer li,
-footer a{
-    font-family: Arial, Helvetica, sans-serif;
+/* TEXTO */
+footer p{
+  font-size:14px;
+  color:#dcdcdc;
 }
 
-
+/* ÁREA CONTATO */
 .social-media{
-    display:flex;
-    align-items:center;
-    justify-content:flex-end;
-    gap:15px;
-    margin-left:20px;
-     font-family: Arial, Helvetica, sans-serif;
+  display:flex;
+  align-items:flex-end;
 }
 
+/* LISTA */
 .social-media ul{
-    list-style:none;
-    display:flex;
+  list-style:none;
+
+  display:flex;
+  flex-direction:column;
+  gap:8px;
+
+  text-align:right;
+}
+
+/* LINKS */
+.social-media a{
+  color:#ffffff;
+  text-decoration:none;
+
+  font-size:14px;
+  font-family:Arial, Helvetica, sans-serif;
+
+  transition:.3s;
+}
+
+.social-media a:hover{
+  color:#d80000;
+}
+
+/* ITENS */
+.social-media li{
+  color:#dcdcdc;
+  font-size:14px;
+
+  font-family:Arial, Helvetica, sans-serif;
+}
+
+/* RESPONSIVO */
+@media(max-width:768px){
+
+  footer{
     flex-direction:column;
-    gap:5px;
-    padding:0;
-    margin:0;
-     font-family: Arial, Helvetica, sans-serif;
+    text-align:center;
+
+    padding:25px 20px;
+  }
+
+  .social-media{
+    width:100%;
+    justify-content:center;
+  }
+
+  .social-media ul{
+    text-align:center;
+  }
+}
+
+
+
+/* =========================
+   FADE IN
+========================= */
+
+.fade-in{
+  opacity:0;
+  transform:translateY(40px);
+
+  transition:
+  opacity 1s ease,
+  transform 1s ease;
+}
+
+.fade-in.show{
+  opacity:1;
+  transform:translateY(0);
+}
+
+
+
+@media(max-width:768px){
+
+  header{
+    padding:15px;
+  }
+
+  nav ul{
+    gap:12px;
+  }
+
+  nav ul li a,
+  .dropdown-btn{
+    font-size:13px;
+  }
+
+  .logo img{
+    height:40px;
+  }
 }
