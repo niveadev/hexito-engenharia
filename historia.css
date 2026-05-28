@@ -145,7 +145,7 @@ nav ul li a:hover{
 
   background:
   linear-gradient(rgba(0,0,0,.6), rgba(0,0,0,.6)),
-  url("img/fundo-historia.jpg");
+  url("hexitofundo.jpg");
 
   background-size:cover;
   background-position:center;
@@ -210,9 +210,12 @@ nav ul li a:hover{
   color:#555;
 }
 
-/* IMAGEM */
-.imagem{
-  flex:1;
+@media(max-width:900px){
+
+  .video iframe{
+    height:250px;
+  }
+
 }
 
 .imagem img{
